@@ -1,0 +1,518 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Gilroy", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  background: #f4f4f4;
+}
+
+nav > ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+nav {
+  display: flex;
+  height: 80px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav > ul > li {
+  padding: 1rem 0;
+  margin-right: 1rem;
+}
+
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.nav-menu-item {
+  display: inline-block;
+  width: 25px;
+  height: 2.5px;
+  transform-origin: 2px;
+  background-color: red;
+  transition: 1s;
+}
+
+#nav_checkbox {
+  display: none;
+}
+
+#nav_checkbox:checked
+  + .nav-list
+  + .login
+  + .nav-menu
+  .nav-menu-item:first-child {
+  transform: rotate(45deg);
+}
+
+#nav_checkbox:checked
+  + .nav-list
+  + .login
+  + .nav-menu
+  .nav-menu-item:nth-child(2) {
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.9s;
+}
+
+#nav_checkbox:checked
+  + .nav-list
+  + .login
+  + .nav-menu
+  .nav-menu-item:last-child {
+  transform: rotate(-45deg);
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+button {
+  border: none;
+  width: 146px;
+  height: 48px;
+  border-radius: 10px;
+  background: #e04560;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.title {
+  font-size: 47px;
+  text-align: center;
+  line-height: 61px;
+  color: #01112c;
+  font-weight: 600;
+  max-width: 490px;
+  margin: 0 auto;
+}
+
+.header-content > h1 {
+  font-size: 64px;
+  line-height: 100%;
+}
+
+.benifit__title {
+  margin-bottom: 50px;
+}
+
+.benefit__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.benefit__card {
+  display: flex;
+  width: 350px;
+  margin-bottom: 20px;
+}
+
+.benefit__card-icon {
+  background-color: #465dff;
+  min-width: 88px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 32px;
+  margin-right: 20px;
+}
+
+.benefit__card-icon--1 {
+  background-color: #465dff;
+}
+.benefit__card-icon--2 {
+  background-color: #6ac75a;
+}
+.benefit__card-icon--3 {
+  background-color: #ff6d43;
+}
+.benefit__card-icon--4 {
+  background-color: #fdcd53;
+}
+.benefit__card-icon--5 {
+  background-color: #ffdda9;
+}
+.benefit__card-icon--6 {
+  background-color: #391484;
+}
+
+.benefit__card-title {
+  color: #12022f;
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.benefit__card-text {
+  color: #594d6d;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.course {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 10px 44px rgba(108, 126, 147, 0.15);
+  border-radius: 12px;
+  padding: 30px 50px;
+  margin-bottom: 70px;
+}
+
+.course-img-item {
+  display: inline-block;
+  width: 296px;
+  height: 260px;
+}
+
+.course-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 142%;
+  letter-spacing: 0.0041em;
+  color: #041223;
+}
+
+.course .col-last {
+  padding-left: 10%;
+}
+
+.course-info-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.course-author {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  text-transform: capitalize;
+  line-height: 160%;
+  letter-spacing: 0.0041em;
+  color: #1664c2;
+}
+
+.course-price {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 142%;
+  letter-spacing: 0.0041em;
+  color: #1664c2;
+}
+
+.course-price-last {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 160%;
+  letter-spacing: 0.0041em;
+  text-decoration-line: line-through;
+  color: #828282;
+}
+
+.course-info-icon {
+  color: #ff6500;
+  border-radius: 1px;
+}
+
+.course-info-rating span {
+  font-weight: 500;
+  line-height: 150%;
+  color: #bdbdbd;
+}
+
+.course-text {
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 125%;
+  letter-spacing: 0.0041em;
+  color: #000000;
+}
+
+.course-info-lectures {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 125%;
+  letter-spacing: 0.0041em;
+  color: #787c84;
+}
+
+.testimonials {
+  min-height: 100vh;
+}
+
+.testimonials-title {
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -1px;
+  color: #1d263a;
+}
+
+.testimonials-card-wrapper {
+  display: flex;
+}
+
+.testimonials-card {
+  padding: 30px 35px;
+  width: 400px;
+  border: 1px solid rgba(223, 223, 223, 0.7);
+  border-radius: 15px;
+  background: #fff;
+  margin: 0 15px 10px 0;
+}
+
+.testimonials-card-author {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff0e6;
+  border-radius: 15px;
+  padding: 15px 30px;
+}
+
+.testimonials-card-title {
+  font-weight: 600;
+  text-transform: capitalize;
+  font-size: 21px;
+  margin: 0;
+  line-height: 30px;
+  color: #1d263a;
+}
+
+.testmonials-card-item p {
+  margin: 0;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 30px;
+  color: #1d263a;
+  opacity: 0.7;
+}
+
+.signup {
+  background-color: #041223;
+  padding-top: 80px;
+}
+
+.signup-wrapper {
+  display: flex;
+}
+
+.signup-text-wrapper {
+  width: 70%;
+}
+
+.signup-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 58px;
+  letter-spacing: -1px;
+}
+
+.signup-text {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  color: #ffffff;
+  opacity: 0.8;
+}
+
+.signup-form {
+  width: 430px;
+  padding: 37px;
+  background: #ffffff;
+  border-radius: 15px;
+}
+
+.signup-form-title {
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  color: #1d263a;
+}
+
+.signup-form-input {
+  padding: 10px 20px;
+  background: #e1ecf0;
+  width: 95%;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 28px;
+  color: #1d263a;
+  border: none;
+  opacity: 0.6;
+}
+
+.signup-form-btn {
+  width: 95%;
+  margin-top: 30px;
+  border-radius: 50px;
+  background: #b6263e;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 70px;
+}
+
+.footer-list {
+  flex-direction: column;
+}
+
+.footer-nav strong {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: capitalize;
+  line-height: 26px;
+  letter-spacing: -0.355556px;
+  color: #12022f;
+}
+
+.footer-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  color: #594d6d;
+}
+
+.footer-input {
+  background: #e7e5ea;
+  border-radius: 28px;
+  font-weight: 400;
+  font-size: 16px;
+  padding: 10px 30px;
+  line-height: 26px;
+  letter-spacing: -0.36px;
+  color: #12022f;
+  border: none;
+}
+
+.footer-social {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.footer-social-link {
+  font-size: x-large;
+  margin-right: 15px;
+}
+
+.footer-social-text {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  color: #594d6d;
+}
+
+.footer-line {
+  width: 80%;
+}
+
+.footer-privacy {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  color: #594d6d;
+}
+
+.footer-privacy-wrapper {
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  color: #12022f;
+}
+
+@media (max-width: 985px) {
+}
+@media (max-width: 768px) {
+  nav > ul {
+    display: none;
+  }
+  .nav-menu {
+    display: flex;
+  }
+  #nav_checkbox:checked + .nav-list {
+    position: absolute;
+    display: flex;
+    top: 15%;
+    height: 60%;
+    justify-content: center;
+    background: #f4f4f4;
+    flex-direction: column;
+  }
+}
+@media (max-width: 1200px) {
+}
+@media (min-width: 1440px) {
+}
+@media (max-width: 845px) {
+}
+@media (max-width: 770px) {
+}
+@media (max-width: 640px) {
+}
+@media (max-width: 500px) {
+}
+@media (max-width: 400px) {
+}
+@media (max-width: 375px) {
+  .login {
+    display: none;
+  }
+  #nav_checkbox:checked + .nav-list + .login {
+    position: absolute;
+    display: inline-block;
+    top: 66%;
+    left: 25%;
+  }
+}
