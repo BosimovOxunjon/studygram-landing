@@ -399,8 +399,19 @@ header {
   padding-top: 70px;
 }
 
+.footer-nav {
+  display: none;
+}
+
 .footer-list {
+  display: flex;
+  list-style: none;
   flex-direction: column;
+  gap: 10px;
+}
+
+.footer-form-wrapper {
+  padding-left: 5%;
 }
 
 .footer-nav strong {
@@ -430,6 +441,7 @@ header {
   line-height: 26px;
   letter-spacing: -0.36px;
   color: #12022f;
+  margin-bottom: 15px;
   border: none;
 }
 
@@ -454,7 +466,8 @@ header {
 }
 
 .footer-line {
-  width: 80%;
+  width: 100%;
+  margin-top: 40px;
 }
 
 .footer-privacy {
@@ -467,6 +480,7 @@ header {
   line-height: 24px;
   letter-spacing: -0.3px;
   color: #594d6d;
+  margin: 40px 0;
 }
 
 .footer-privacy-wrapper {
@@ -563,6 +577,9 @@ header {
   .course {
     padding: 5%;
   }
+  .footer-privacy {
+    flex-wrap: wrap;
+  }
 }
 @media (max-width: 480px) {
   .testimonials-card-author {
@@ -578,7 +595,20 @@ header {
     font-size: 30px;
   }
   .signup-form {
-    padding: 10%;
+    padding: 5%;
+  }
+  .footer-container {
+    flex-direction: column;
+  }
+  .footer-form-wrapper {
+    text-align: center;
+    padding-left: 0;
+  }
+  .footer-social {
+    flex-direction: column;
+  }
+  .footer-social-media {
+    order: 1;
   }
 }
 @media (max-width: 375px) {
